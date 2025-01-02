@@ -38,7 +38,7 @@
             margin-top: 0;
             color: #6200ea;
         }
-        img, video {
+        img, iframe {
             display: block;
             max-width: 100%;
             margin: 15px 0;
@@ -66,10 +66,7 @@
         <section>
             <h2>See the App in Action</h2>
             <p>Watch the app dynamically calculate win probability based on the current board state in MTG Arena:</p>
-            <video controls>
-                <source src="pics/whole_game_video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SK64PcYHIi0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
 
         <section>
@@ -104,9 +101,13 @@
                 <li><strong>Privacy:</strong> The app only accesses the log file path and does not connect to the internet.</li>
                 <li><strong>Windows Security Warning:</strong> When running the <code>.exe</code> file, Windows may display a warning that the file is "untrustworthy." To proceed, click <strong>More Info</strong> and then <strong>Run Anyway</strong>.</li>
                 <li><strong>Support:</strong> Feel free to email <a href="mailto:jwrightzz1234@gmail.com">jwrightzz1234@gmail.com</a> with any comments or questions.</li>
-     
+            </ul>
+            <p>Example log entry showing the app’s activation:</p>
+            <pre><code>{"state": "GAME_FOUND", "timestamp": "2025-01-01T12:00:00Z"}</code></pre>
         </section>
     </main>
-   
+    <footer>
+        <p>&copy; 2025 MTG Win Rate Calculator. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
