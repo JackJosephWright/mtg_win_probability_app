@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time MTG Arena Win Rate Probability Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            margin-top: 0;
+            color: #6200ea;
+        }
+        img, video {
+            display: block;
+            max-width: 100%;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #6200ea;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Real-Time MTG Arena Win Rate Probability Calculator</h1>
+    </header>
+    <main>
+        <section>
+            <h2>See the App in Action</h2>
+            <p>Watch the app dynamically calculate win probability based on the current board state in MTG Arena:</p>
+            <video controls>
+                <source src="pics/whole_game_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section>
+            <h2>How It Works</h2>
+            <p>This app uses machine learning, trained on <a href="https://www.17lands.com/" target="_blank" rel="noopener noreferrer">17lands</a> data, to predict the probability of winning a match based on the board state. Here’s how it operates:</p>
+            <ul>
+                <li><strong>Detailed Logs:</strong> Ensure that MTG Arena has <code>detailed logs</code> turned on.</li>
+                <li><strong>Log Reading:</strong> The app reads the log file and activates when a new game is found.</li>
+                <li><strong>Dynamic Updates:</strong> As the board state changes, win probability is recalculated and displayed in real-time.</li>
+            </ul>
+            <p>The graph below tracks win probability snapshots throughout the game, providing a clear picture of the game’s progression:</p>
+            <img src="pics/app_ss.png" alt="Win Probability Graph">
+        </section>
+
+        <section>
+            <h2>Machine Learning Model</h2>
+            <p>The model powering this app was trained on millions of games from 17lands’ publicly available data. Key features include:</p>
+            <ul>
+                <li>Game state metrics: Cards in hand, lands in play, creatures on the battlefield, and more.</li>
+                <li>Win/Loss outcomes: Used as the target variable for prediction.</li>
+                <li>Dynamic board evaluation: Adjusts predictions based on changes in game state.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technical Details</h2>
+            <p>Here are the technical requirements and setup instructions for running the app:</p>
+            <ul>
+                <li><strong>Platform:</strong> Windows</li>
+                <li><strong>Setup:</strong> <a href="path_to_your_app.exe" download>Download the app</a> as a .zip file and unzip it. Run the <code>.exe</code> file to start.</li>
+                <li><strong>Automation:</strong> The app will automatically detect the log file path for MTG Arena. Make sure detailed logs are turned on in the game.</li>
+                <li><strong>Privacy:</strong> The app only accesses the log file path and does not connect to the internet.</li>
+                <li><strong>Windows Security Warning:</strong> When running the <code>.exe</code> file, Windows may display a warning that the file is "untrustworthy." To proceed, click <strong>More Info</strong> and then <strong>Run Anyway</strong>.</li>
+                <li><strong>Support:</strong> Feel free to email <a href="mailto:jwrightzz1234@gmail.com">jwrightzz1234@gmail.com</a> with any comments or questions.</li>
+     
+        </section>
+    </main>
+   
+</body>
+</html>
